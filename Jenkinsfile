@@ -1,8 +1,8 @@
 node {
     def version
-    // stage('Checkout Github Repo') {
-    //     git 'https://github.com/mustaFAB53/helmdemo.git'
-    // }
+    stage('Checkout Github Repo') {
+        git 'https://github.com/mustaFAB53/helmdemo.git'
+    }
     stage('Helm Lint') {
         sh "helm lint helmcharts/sample-chart/"
     }
